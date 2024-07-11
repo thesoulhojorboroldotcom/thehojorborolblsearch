@@ -52,7 +52,7 @@ now_utc = datetime.now(pytz.utc)
 now_bangladesh = now_utc.astimezone(bangladesh_tz)
 
 # Print formatted date and time
-st.warning(f"Last Update Time: {now_bangladesh.strftime("%d-%m-%Y %H:%M:%S")}") 
+st.warning(f"Last Update Time: {now_bangladesh.strftime('%d-%m-%Y %H:%M:%S')}") 
 st.success(f"Total Search Today: {json_object["balance"]}")
 
 
