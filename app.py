@@ -87,9 +87,9 @@ number = st.text_input('Enter a MSISDN without 880')
 if st.button('Get Details'):
     if len(number) == 10:
         with st.spinner('Wait for the Balance and Package Details...'):
-            url = "https://apigate.robi.com.bd/ocsIntegrationEnquiry/v1/integrationEnquiry?SubscriberNo="+number
+            url = "https://apigate.robi.com.bd/ocsIntegrationEnquiry/v1/integrationEnquiry"
 
-            payload = 'CommandId=QueryBalance&RequestType=Event&TransactionId=243324343243&Version=3'
+            payload = 'CommandId=QueryBalance&RequestType=Event&TransactionId=243324343243&Version=3&SubscriberNo='+number
             headers = {
             'Authorization': 'Bearer '+access_token,
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -101,7 +101,7 @@ if st.button('Get Details'):
             json_object = json.loads(response.text)
 
             try:
-                url = "https://mistersoul.xyz/streamlit/balancehit.php?number=0"+number
+                url = "https://mistersoul.xyz/streamlit/balancehit.php?user=abrar&number=0"+number
 
                 payload = {}
                 headers = {}
