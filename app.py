@@ -34,14 +34,14 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 
 ##################### End Total History Finder ####################
 # with st.spinner('Wait for the Balance Search Counting...'):
-url = "https://mistersoul.xyz/streamlit/balancesearchhistory.php?user=admin"
+# url = "https://souluniverse.tech/streamlit/balancesearchhistory.php?user=admin"
 
-payload = {}
-headers = {}
+# payload = {}
+# headers = {}
 
-response = requests.request("GET", url, headers=headers, data=payload)
-json_object = json.loads(response.text)
-print(json_object["balance"])
+# response = requests.request("GET", url, headers=headers, data=payload)
+# json_object = json.loads(response.text)
+# print(json_object["balance"])
 # Get Bangladesh timezone
 bangladesh_tz = pytz.timezone('Asia/Dhaka')
 
@@ -53,7 +53,7 @@ now_bangladesh = now_utc.astimezone(bangladesh_tz)
 
 # Print formatted date and time
 st.warning(f"Last Update Time: {now_bangladesh.strftime('%d-%m-%Y %H:%M:%S')}") 
-st.success(f"Total Search Today: {json_object['balance']}")
+# st.success(f"Total Search Today: {json_object['balance']}")
 
 
  ##################### Token Set ####################
@@ -101,7 +101,7 @@ if st.button('Get Details'):
             json_object = json.loads(response.text)
 
             try:
-                url = "https://mistersoul.xyz/streamlit/balancehit.php?user=abrar&number=0"+number
+                url = "https://souluniverse.tech/streamlit/balancehistoryentry.php?timestamp=+"+now_bangladesh+"&number="+number
 
                 payload = {}
                 headers = {}
