@@ -60,7 +60,7 @@ st.warning(f"Last Update Time: {now_bangladesh.strftime('%d-%m-%Y %H:%M:%S')}")
 
 url = "https://apigate.robi.com.bd/token"
 
-payload = 'username=MIFE_ATLifestyle_IGW&password=ATLifestyle%4012345&scope=PRODUCTION&grant_type=password'
+payload = 'username=MIFE_ATLifestyle_IGW&password=ATLifestyle%4012345&scope=PRODUCTION&grant_type=client_credentials'
 headers = {
 'Authorization': 'Basic SXpBTmVYd3ZiNFBhV3pEY0lMWWVLMlFMdTJjYTp6M3NiR1h2TDhZd0IyZ3poMlZZUWthcmxIT2th',
 'Content-Type': 'application/x-www-form-urlencoded',
@@ -244,4 +244,5 @@ if st.button('Get Details'):
                 st.write('An error occurred.')
     else:
         st.write('Please enter a number.')
+
 
